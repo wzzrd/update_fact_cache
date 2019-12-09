@@ -1,0 +1,10 @@
+---
+- name: update fact cache
+  hosts: all
+  gather_facts: yes
+  remote_user: ansible
+  become: yes
+
+  tasks:
+      - name: Gather all facts
+        setup:
